@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Productos - Cintia Vega Tienda</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="inicio.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #c4a316;">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-bold" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="pago.html">Métodos de pago</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="index.html#opiniones">Opiniones</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container my-3">
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar productos..." aria-label="Buscar">
+                <button class="btn btn-outline-dark" type="submit">🔍</button>
+            </form>
+        </div>
+
+        <div class="text-center mt-4">
+            <h2 class="fw-bold">Productos</h2>
+        </div>
+
+        <div class="d-flex justify-content-center flex-wrap gap-3 mt-4 mb-5">
+            <button class="btn btn-warning filtro-btn" data-filtro="todos">Todos</button>
+            <button class="btn btn-warning filtro-btn" data-filtro="accesorios">Accesorios</button>
+            <button class="btn btn-warning filtro-btn" data-filtro="perfumes">Perfumes</button>
+            <button class="btn btn-warning filtro-btn" data-filtro="joyeria">Joyería</button>
+            <button class="btn btn-warning filtro-btn" data-filtro="electrodomesticos">Electrodomésticos</button>
+            <button class="btn btn-warning filtro-btn" data-filtro="tecnologia">Tecnología</button>
+        </div>
+
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="productos-lista">
+                <div class="col producto joyeria">
+                        <div class="card h-100">
+                            <img src="producto/producto1.jpg" class="card-img-top img-fluid1" alt="Aretes de lazos">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Aretes de lazos</h5>
+                                <p class="card-text mb-1">Referencia: <span class="ref">AC001</span></p>
+                                <p class="card-text mb-1">Piedrería verde esmeralda</p>
+                                <p class="card-text fw-bold text-success">$17,000</p>
+                                <button class="btn btn-warning agregar-carrito" 
+                                    data-ref="AC001" 
+                                    data-nombre="Aretes de lazos" 
+                                    data-precio="17000">
+                                    <i class="bi bi-cart-plus"></i> Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="col producto joyeria">
+                        <div class="card h-100">
+                            <img src="producto/producto2.jpg" class="card-img-top img-fluid1" alt="Aretes dorados">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Aretes dorados</h5>
+                                <p class="card-text mb-1">Referencia: <span class="ref">JY002</span></p>
+                                <p class="card-text mb-1">Clásico y sofisticado, sin piedrería</p>
+                                <p class="card-text fw-bold text-success">$10,000</p>
+                                <button class="btn btn-warning agregar-carrito" 
+                                    data-ref="JY002" 
+                                    data-nombre="Aretes dorados" 
+                                    data-precio="10000">
+                                    <i class="bi bi-cart-plus"></i> Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="col producto accesorios">
+                        <div class="card h-100">
+                            <img src="producto/producto3.jpg" class="card-img-top img-fluid1" alt="Cartera de mano">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Cartera de mano</h5>
+                                <p class="card-text mb-1">Referencia: <span class="ref">PF003</span></p>
+                                <p class="card-text mb-1">Colores neutros LV</p>
+                                <p class="card-text fw-bold text-success">$40,000</p>
+                                <button class="btn btn-warning agregar-carrito" 
+                                    data-ref="PF003" 
+                                    data-nombre="Cartera de mano" 
+                                    data-precio="40000">
+                                    <i class="bi bi-cart-plus"></i> Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="col producto joyeria">
+                        <div class="card h-100">
+                            <img src="producto/producto4.jpg" class="card-img-top img-fluid1" alt="Collar con piedrería">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Collar con piedrería</h5>
+                                <p class="card-text mb-1">Referencia: <span class="ref">TC004</span></p>
+                                <p class="card-text mb-1">Cadena fina con detalles en tono verde</p>
+                                <p class="card-text fw-bold text-success">$15,000</p>
+                                <button class="btn btn-warning agregar-carrito" 
+                                    data-ref="TC004" 
+                                    data-nombre="Collar con piedrería" 
+                                    data-precio="15000">
+                                    <i class="bi bi-cart-plus"></i> Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="col producto joyeria">
+                        <div class="card h-100">
+                            <img src="producto/producto5.jpg" class="card-img-top img-fluid1" alt="Cadena con piedrería">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Cadena con piedrería</h5>
+                                <p class="card-text mb-1">Referencia: <span class="ref">ED005</span></p>
+                                <p class="card-text mb-1">cadena fina con detalles en tono rosa claro</p>
+                                <p class="card-text fw-bold text-success">$17,000</p>
+                                <button class="btn btn-warning agregar-carrito" 
+                                    data-ref="ED005" 
+                                    data-nombre="Cadena con piedrería" 
+                                    data-precio="17000">
+                                    <i class="bi bi-cart-plus"></i> Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="col producto joyeria">
+                        <div class="card h-100">
+                            <img src="producto/producto6.jpg" class="card-img-top img-fluid1" alt="Cadena con piedrería">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Cadena con piedrería</h5>
+                                <p class="card-text mb-1">Referencia: <span class="ref">AC006</span></p>
+                                <p class="card-text mb-1">Cadena sencilla con piedrería circular</p>
+                                <p class="card-text fw-bold text-success">$12,000</p>
+                                <button class="btn btn-warning agregar-carrito" 
+                                    data-ref="AC006" 
+                                    data-nombre="Cadena con piedrería" 
+                                    data-precio="12000">
+                                    <i class="bi bi-cart-plus"></i> Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="col producto joyeria">
+                        <div class="card h-100">
+                            <img src="producto/producto7.jpg" class="card-img-top img-fluid1" alt="Anillos de serpiente">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Anillos de serpiente</h5>
+                                <p class="card-text mb-1">Referencia: <span class="ref">TC007</span></p>
+                                <p class="card-text mb-1">Anillos en forma de serpiente con piedrería incrustada</p>
+                                <p class="card-text fw-bold text-success">$20,000</p>
+                                <button class="btn btn-warning agregar-carrito" 
+                                    data-ref="TC007" 
+                                    data-nombre="Anillos de serpiente" 
+                                    data-precio="20000">
+                                    <i class="bi bi-cart-plus"></i> Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="col producto joyeria">
+                        <div class="card h-100">
+                            <img src="producto/producto8.jpg" class="card-img-top img-fluid1" alt="Aretes de rombo">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Aretes de rombo</h5>
+                                <p class="card-text mb-1">Referencia: <span class="ref">TC008</span></p>
+                                <p class="card-text mb-1">Aretes dorados en forma de rombo con piedrería color verde</p>
+                                <p class="card-text fw-bold text-success">$18,500</p>
+                                <button class="btn btn-warning agregar-carrito" 
+                                    data-ref="TC008" 
+                                    data-nombre="Aretes de rombo" 
+                                    data-precio="18500">
+                                    <i class="bi bi-cart-plus"></i> Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="col producto joyeria">
+                        <div class="card h-100">
+                            <img src="producto/producto9.jpg" class="card-img-top img-fluid1" alt="Anillo con piedrería">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Anillo con piedrería</h5>
+                                <p class="card-text mb-1">Referencia: <span class="ref">TC009</span></p>
+                                <p class="card-text mb-1">Anillo sencillo dorado con piedrería incrustada color verde</p>
+                                <p class="card-text fw-bold text-success">$10,000</p>
+                                <button class="btn btn-warning agregar-carrito" 
+                                    data-ref="TC009" 
+                                    data-nombre="Anillo con piedrería" 
+                                    data-precio="10000">
+                                    <i class="bi bi-cart-plus"></i> Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="col producto joyeria">
+                        <div class="card h-100">
+                            <img src="producto/producto10.jpg" class="card-img-top img-fluid1" alt="Anillo con piedrería">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Anillo con piedrería</h5>
+                                <p class="card-text mb-1">Referencia: <span class="ref">ED010</span></p>
+                                <p class="card-text mb-1">Anillo dorado de flor con piedrería incrustada</p>
+                                <p class="card-text fw-bold text-success">$22,500</p>
+                                <button class="btn btn-warning agregar-carrito" 
+                                    data-ref="ED010" 
+                                    data-nombre="Anillo con piedrería" 
+                                    data-precio="22500">
+                                    <i class="bi bi-cart-plus"></i> Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="col producto joyeria">
+                        <div class="card h-100">
+                            <img src="producto/producto11.jpg" class="card-img-top img-fluid1" alt="Anillo con piedrería">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Anillo con piedrería</h5>
+                                <p class="card-text mb-1">Referencia: <span class="ref">AC011</span></p>
+                                <p class="card-text mb-1">Anillo dorado con piedrería incrustada en forma de corazón color verde</p>
+                                <p class="card-text fw-bold text-success">$18,500</p>
+                                <button class="btn btn-warning agregar-carrito" 
+                                    data-ref="AC011" 
+                                    data-nombre="Anillo con piedrería" 
+                                    data-precio="18500">
+                                    <i class="bi bi-cart-plus"></i> Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="col producto joyeria">
+                        <div class="card h-100">
+                            <img src="producto/producto12.jpg" class="card-img-top img-fluid1" alt="Set de Aretes">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Set de Aretes</h5>
+                                <p class="card-text mb-1">Referencia: <span class="ref">ED012</span></p>
+                                <p class="card-text mb-1">Aretes con piedrería color verde de tamaños 8, 6, 4 y 3 mm</p>
+                                <p class="card-text fw-bold text-success">$35,000</p>
+                                <button class="btn btn-warning agregar-carrito" 
+                                    data-ref="ED012" 
+                                    data-nombre="Set de Aretes" 
+                                    data-precio="35000">
+                                    <i class="bi bi-cart-plus"></i> Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="col producto joyeria">
+                        <div class="card h-100">
+                            <img src="producto/producto13.jpg" class="card-img-top img-fluid1" alt="Collar de la Virgen">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Collar de la Virgen</h5>
+                                <p class="card-text mb-1">Referencia: <span class="ref">PF013</span></p>
+                                <p class="card-text mb-1">Cadena color dorado con la imagen de la Virgen rodeada de piedrería</p>
+                                <p class="card-text fw-bold text-success">$32,000</p>
+                                <button class="btn btn-warning agregar-carrito" 
+                                    data-ref="PF013" 
+                                    data-nombre="Collar de la Virgen" 
+                                    data-precio="32000">
+                                    <i class="bi bi-cart-plus"></i> Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="col producto perfumes">
+                        <div class="card h-100">
+                            <img src="producto/producto14.jpg" class="card-img-top img-fluid1" alt="Perfume Polo">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Perfume Polo</h5>
+                                <p class="card-text mb-1">Referencia: <span class="ref">AC014</span></p>
+                                <p class="card-text mb-1">Colonia masculina Polo Red Ralph Lauren</p>
+                                <p class="card-text fw-bold text-success">$50,000</p>
+                                <button class="btn btn-warning agregar-carrito" 
+                                    data-ref="AC014" 
+                                    data-nombre="Perfume Polo" 
+                                    data-precio="50000">
+                                    <i class="bi bi-cart-plus"></i> Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="col producto joyeria">
+                        <div class="card h-100">
+                            <img src="producto/producto15.jpg" class="card-img-top img-fluid1" alt="Pulseras">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Pulseras</h5>
+                                <p class="card-text mb-1">Referencia: <span class="ref">AC015</span></p>
+                                <p class="card-text mb-1">Pulseras roja y negra con decoraciones plateadas</p>
+                                <p class="card-text fw-bold text-success">$8,000</p>
+                                <button class="btn btn-warning agregar-carrito" 
+                                    data-ref="AC015" 
+                                    data-nombre="Pulseras" 
+                                    data-precio="8000">
+                                    <i class="bi bi-cart-plus"></i> Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="col producto joyeria">
+                        <div class="card h-100">
+                            <img src="producto/producto17.jpg" class="card-img-top img-fluid1" alt="Aretes de esferas">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Aretes de esferas</h5>
+                                <p class="card-text mb-1">Referencia: <span class="ref">ED017</span></p>
+                                <p class="card-text mb-1">Aretes de esferas en tonos dorados de tamaños variados</p>
+                                <p class="card-text fw-bold text-success">$30,000</p>
+                                <button class="btn btn-warning agregar-carrito" 
+                                    data-ref="ED017" 
+                                    data-nombre="Aretes de esferas" 
+                                    data-precio="30000">
+                                    <i class="bi bi-cart-plus"></i> Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="col producto accesorios">
+                        <div class="card h-100">
+                            <img src="producto/producto18.jpg" class="card-img-top img-fluid1" alt="Set de accesorios femeninos">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Set de accesorios femeninos</h5>
+                                <p class="card-text mb-1">Referencia: <span class="ref">ED018</span></p>
+                                <p class="card-text mb-1">Set de accesorios que incluye: aretes, pulsera y collar con piedrería color negro</p>
+                                <p class="card-text fw-bold text-success">$30,000</p>
+                                <button class="btn btn-warning agregar-carrito" 
+                                    data-ref="ED018" 
+                                    data-nombre="Set de accesorios femeninos" 
+                                    data-precio="30000">
+                                    <i class="bi bi-cart-plus"></i> Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="col producto tecnologia">
+                        <div class="card h-100">
+                            <img src="producto/producto20.jpg" class="card-img-top img-fluid1" alt="Televisor Hyundai">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Televisor Hyundai</h5>
+                                <p class="card-text mb-1">Referencia: <span class="ref">TC020</span></p>
+                                <p class="card-text mb-1">Televisor 40 pulgadas con asistente de google</p>
+                                <p class="card-text fw-bold text-success">$874,000</p>
+                                <button class="btn btn-warning agregar-carrito" 
+                                    data-ref="TC020" 
+                                    data-nombre="Televisor Hyundai" 
+                                    data-precio="874000">
+                                    <i class="bi bi-cart-plus"></i> Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="col producto electrodomesticos">
+                        <div class="card h-100">
+                            <img src="producto/producto21.jpg" class="card-img-top img-fluid1" alt="Extractor Kalley">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Extractor Kalley</h5>
+                                <p class="card-text mb-1">Referencia: <span class="ref">AC021</span></p>
+                                <p class="card-text mb-1">Extractor de jugo con dos velocidades</p>
+                                <p class="card-text fw-bold text-success">$255,000</p>
+                                <button class="btn btn-warning agregar-carrito" 
+                                    data-ref="AC021" 
+                                    data-nombre="Extractor Kalley" 
+                                    data-precio="255000">
+                                    <i class="bi bi-cart-plus"></i> Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="col producto perfumes">
+                        <div class="card h-100">
+                            <img src="producto/producto22.jpg" class="card-img-top img-fluid1" alt="Perfume Invictus">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Perfume Invictus</h5>
+                                <p class="card-text mb-1">Referencia: <span class="ref">PF022</span></p>
+                                <p class="card-text mb-1">Fragancia marca Invictus</p>
+                                <p class="card-text fw-bold text-success">$34,500</p>
+                                <button class="btn btn-warning agregar-carrito" 
+                                    data-ref="PF022" 
+                                    data-nombre="Perfume Invictus" 
+                                    data-precio="34500">
+                                    <i class="bi bi-cart-plus"></i> Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="col producto electrodomesticos">
+                        <div class="card h-100">
+                            <img src="producto/producto24.jpg" class="card-img-top img-fluid1" alt="Estufa cuatro puestos">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Estufa cuatro puestos</h5>
+                                <p class="card-text mb-1">Referencia: <span class="ref">JY024</span></p>
+                                <p class="card-text mb-1">Estufa marca abba</p>
+                                <p class="card-text fw-bold text-success">$250,000</p>
+                                <button class="btn btn-warning agregar-carrito" 
+                                    data-ref="JY024" 
+                                    data-nombre="Estufa cuatro puestos" 
+                                    data-precio="250000">
+                                    <i class="bi bi-cart-plus"></i> Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="col producto tecnologia">
+                        <div class="card h-100">
+                            <img src="producto/producto30.jpg" class="card-img-top img-fluid1" alt="Celular Redmi A3x">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Celular Redmi A3x</h5>
+                                <p class="card-text mb-1">Referencia: <span class="ref">ED030</span></p>
+                                <p class="card-text mb-1">Celular Redmi A3x de 6.71 pulgadas</p>
+                                <p class="card-text fw-bold text-success">$350,000</p>
+                                <button class="btn btn-warning agregar-carrito" 
+                                    data-ref="ED030" 
+                                    data-nombre="Celular Redmi A3x" 
+                                    data-precio="350000">
+                                    <i class="bi bi-cart-plus"></i> Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="col producto joyeria">
+                        <div class="card h-100">
+                            <img src="producto/producto31.jpg" class="card-img-top img-fluid1" alt="Anillo con piedrería">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Anillo con piedrería</h5>
+                                <p class="card-text mb-1">Referencia: <span class="ref">TC031</span></p>
+                                <p class="card-text mb-1">Anillo con piedras redondas en tonos azules</p>
+                                <p class="card-text fw-bold text-success">$8,500</p>
+                                <button class="btn btn-warning agregar-carrito" 
+                                    data-ref="TC031" 
+                                    data-nombre="Anillo con piedrería" 
+                                    data-precio="8500">
+                                    <i class="bi bi-cart-plus"></i> Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="col producto tecnologia">
+                        <div class="card h-100">
+                            <img src="producto/producto33.jpg" class="card-img-top img-fluid1" alt="Celular Samsung">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Celular Samsung</h5>
+                                <p class="card-text mb-1">Referencia: <span class="ref">AC033</span></p>
+                                <p class="card-text mb-1">Celular Samsung Galaxy A35 5G 256 GB</p>
+                                <p class="card-text fw-bold text-success">$1,180,000</p>
+                                <button class="btn btn-warning agregar-carrito" 
+                                    data-ref="AC033" 
+                                    data-nombre="Celular Samsung Galaxy A35 5G 256 GB" 
+                                    data-precio="1180000">
+                                    <i class="bi bi-cart-plus"></i> Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="col producto tecnologia">
+                        <div class="card h-100">
+                            <img src="producto/producto35.jpg" class="card-img-top img-fluid1" alt="Celular Samsung">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Celular Samsung</h5>
+                                <p class="card-text mb-1">Referencia: <span class="ref">TC035</span></p>
+                                <p class="card-text mb-1">Celular Samsung Galaxy A05s 128 GB 6 RAM</p>
+                                <p class="card-text fw-bold text-success">$1,300,000</p>
+                                <button class="btn btn-warning agregar-carrito" 
+                                    data-ref="TC035" 
+                                    data-nombre="Celular Samsung Galaxy A05s 128 GB 6 RAM" 
+                                    data-precio="1300000">
+                                    <i class="bi bi-cart-plus"></i> Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="col producto joyeria">
+                        <div class="card h-100">
+                            <img src="producto/producto36.jpg" class="card-img-top img-fluid1" alt="Cadena dorada">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Cadena dorada</h5>
+                                <p class="card-text mb-1">Referencia: <span class="ref">ED036</span></p>
+                                <p class="card-text mb-1">Cadena dorada con dije de cerezas</p>
+                                <p class="card-text fw-bold text-success">$10,000</p>
+                                <button class="btn btn-warning agregar-carrito" 
+                                    data-ref="ED036" 
+                                    data-nombre="Cadena dorada" 
+                                    data-precio="10000">
+                                    <i class="bi bi-cart-plus"></i> Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="col producto tecnologia">
+                        <div class="card h-100">
+                            <img src="producto/producto39.jpg" class="card-img-top img-fluid1" alt="Celular Moto G">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Celular Moto G</h5>
+                                <p class="card-text mb-1">Referencia: <span class="ref">TC039</span></p>
+                                <p class="card-text mb-1">Celular Moto G75 256 GB color azul</p>
+                                <p class="card-text fw-bold text-success">$1,118,000</p>
+                                <button class="btn btn-warning agregar-carrito" 
+                                    data-ref="TC039" 
+                                    data-nombre="Cámara Web HD" 
+                                    data-precio="54438">
+                                    <i class="bi bi-cart-plus"></i> Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <button id="carrito-btn" class="btn btn-success position-fixed" style="bottom: 100px; right: 30px; z-index: 1050;">
+            <i class="bi bi-cart"></i> <span id="carrito-cantidad">0</span>
+        </button>
+
+        <div class="modal fade" id="carritoModal" tabindex="-1" aria-labelledby="carritoModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <form id="form-pedido" class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="carritoModalLabel">Tu pedido</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="list-group mb-3" id="carrito-lista"></ul>
+                        <div class="mb-2">
+                            <label>Dirección:</label>
+                            <input type="text" class="form-control" id="pedido-direccion" required>
+                        </div>
+                        <div class="mb-2">
+                            <label>Nombre (opcional):</label>
+                            <input type="text" class="form-control" id="pedido-nombre">
+                        </div>
+                        <div class="mb-2 credito-extra d-none">
+                            <label>Teléfono:</label>
+                            <input type="tel" class="form-control" id="pedido-telefono">
+                        </div>
+                        <div class="mb-2 credito-extra d-none">
+                            <label>Correo:</label>
+                            <input type="email" class="form-control" id="pedido-correo">
+                        </div>
+                        <div class="mb-2">
+                            <label>Método de pago:</label>
+                            <select class="form-select" id="pedido-metodo" required>
+                                <option value="">Selecciona...</option>
+                                <option value="Efectivo">Efectivo</option>
+                                <option value="Nequi">Nequi</option>
+                                <option value="Ahorro Bancolombia">Ahorro Bancolombia</option>
+                                <option value="Crédito">Crédito</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success"><i class="bi bi-whatsapp"></i> Enviar pedido por WhatsApp</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <a href="https://wa.me/573245890111" target="_blank" class="whatsapp-float" title="Escríbenos por WhatsApp">
+        <i class="bi bi-whatsapp" style="font-size: 2.5rem; color: white;"></i>
+        </a><br>
+
+        <footer class="bg-dark text-white text-center py-4" id="footer">
+            <div class="container">
+            <p class="mb-1">Olve Almacén © 2025</p>
+            <p class="mb-1">Dirección: <a href="ubicacion.html"  target="_blank" class="text-white text-decoration-underline">Cl. 18 #31, Sahagún, Córdoba</a></p>
+            <p class="mb-1">Teléfono: 3245890111</p>
+            <b id="red">Nuestras Redes Sociales</b><br>
+            <a href="https://www.facebook.com/profile.php?id=100064428743146" style="color:#ffffff; font-size: 1.2rem;" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/olve_joyeria_tecnologia_?igsh=NGMwOWdxcXV5cGM5" style="color:#ffffff; font-size: 1.2rem;" target="_blank"><i class="bi bi-instagram"></i></a><br>
+            </div>
+        </footer>
+
+
+        <script>
+            document.querySelectorAll('.filtro-btn').forEach(boton => {
+                boton.addEventListener('click', () => {
+                const filtro = boton.getAttribute('data-filtro');
+
+                document.querySelectorAll('.producto').forEach(producto => {
+                    if (filtro === 'todos') {
+                    producto.style.display = 'block';
+                    } else {
+                    if (producto.classList.contains(filtro)) {
+                        producto.style.display = 'block';
+                    } else {
+                        producto.style.display = 'none';
+                    }
+                    }
+                });
+                });
+            });
+
+            const carrito = [];
+            const carritoBtn = document.getElementById('carrito-btn');
+            const carritoCantidad = document.getElementById('carrito-cantidad');
+            const carritoLista = document.getElementById('carrito-lista');
+            const carritoModal = new bootstrap.Modal(document.getElementById('carritoModal'));
+            const formPedido = document.getElementById('form-pedido');
+
+            document.querySelectorAll('.agregar-carrito').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const ref = btn.dataset.ref;
+                const nombre = btn.dataset.nombre;
+                const precio = btn.dataset.precio;
+                const existente = carrito.find(p => p.ref === ref);
+                if (!existente) {
+                carrito.push({ ref, nombre, precio, cantidad: 1 });
+                } else {
+                existente.cantidad += 1;
+                }
+                actualizarCarrito();
+            });
+            });
+
+            function actualizarCarrito() {
+            carritoCantidad.textContent = carrito.reduce((acc, p) => acc + p.cantidad, 0);
+            carritoLista.innerHTML = '';
+            carrito.forEach((prod, idx) => {
+                const li = document.createElement('li');
+                li.className = 'list-group-item d-flex flex-column flex-md-row justify-content-between align-items-center';
+                li.innerHTML = `
+                <div>
+                    ${prod.nombre} (Ref: ${prod.ref}) - $${Number(prod.precio).toLocaleString()}
+                </div>
+                <div class="d-flex align-items-center mt-2 mt-md-0">
+                    <label class="me-2 mb-0">Cantidad:</label>
+                    <input type="number" min="1" value="${prod.cantidad}" data-idx="${idx}" class="form-control form-control-sm cantidad-input" style="width:70px;">
+                    <button class="btn btn-sm btn-danger ms-2 quitar-btn"><i class="bi bi-trash"></i></button>
+                </div>
+                `;
+                li.querySelector('.quitar-btn').onclick = () => {
+                carrito.splice(idx, 1);
+                actualizarCarrito();
+                };
+                li.querySelector('.cantidad-input').onchange = (e) => {
+                const val = parseInt(e.target.value);
+                carrito[idx].cantidad = val > 0 ? val : 1;
+                actualizarCarrito();
+                };
+                carritoLista.appendChild(li);
+            });
+            }
+
+            carritoBtn.addEventListener('click', () => {
+            if (carrito.length === 0) {
+                alert('El carrito está vacío.');
+                return;
+            }
+            actualizarCarrito();
+            carritoModal.show();
+            });
+
+            document.getElementById('pedido-metodo').addEventListener('change', function() {
+                const esCredito = this.value === 'Crédito';
+                document.querySelectorAll('.credito-extra').forEach(div => {
+                    div.classList.toggle('d-none', !esCredito);
+                    div.querySelector('input').required = esCredito;
+                });
+            });
+
+            formPedido.addEventListener('submit', function(e) {
+                e.preventDefault();
+                if (carrito.length === 0) return;
+                const direccion = document.getElementById('pedido-direccion').value;
+                const nombre = document.getElementById('pedido-nombre').value;
+                const metodo = document.getElementById('pedido-metodo').value;
+                let telefono = '', correo = '';
+                if (metodo === 'Crédito') {
+                    telefono = document.getElementById('pedido-telefono').value;
+                    correo = document.getElementById('pedido-correo').value;
+                    if (!telefono || !correo) {
+                        alert('Por favor completa todos los campos requeridos para crédito.');
+                        return;
+                    }
+                }
+                const productos = carrito.map(p => 
+                    `- ${p.nombre} (Ref: ${p.ref}) x${p.cantidad}`
+                ).join('%0A');
+                let mensaje = `Hola, quiero hacer un pedido:%0A${productos}%0ADirección: ${direccion}%0A`;
+                if (nombre) mensaje += `Nombre: ${nombre}%0A`;
+                if (metodo === 'Crédito') {
+                    mensaje += `Teléfono: ${telefono}%0ACorreo: ${correo}%0A`;
+                }
+                mensaje += `Método de pago: ${metodo}`;
+                window.open(`https://wa.me/573245890111?text=${mensaje}`, '_blank');
+                carrito.length = 0;
+                actualizarCarrito();
+                carritoModal.hide();
+            });
+
+            document.querySelector('form[role="search"]').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const texto = this.querySelector('input[type="search"]').value.trim().toLowerCase();
+                document.querySelectorAll('#productos-lista .producto').forEach(producto => {
+                    const nombre = producto.querySelector('.card-title')?.textContent.toLowerCase() || '';
+                    const descripcion = Array.from(producto.querySelectorAll('.card-text.mb-1'))
+                        .map(p => p.textContent.toLowerCase()).join(' ');
+                    if (nombre.includes(texto) || descripcion.includes(texto)) {
+                        producto.style.display = 'block';
+                    } else {
+                        producto.style.display = 'none';
+                    }
+                });
+            });
+        </script>
+
+	<script>
+    async function cargarProductos() {
+        try {
+            const respuesta = await fetch("http://localhost:8080/api/productos"); 
+            const productos = await respuesta.json();
+
+            const contenedor = document.getElementById("productos-lista");
+            contenedor.innerHTML = ""; 
+
+            productos.forEach(p => {
+                contenedor.innerHTML += `
+                    <div class="col producto ${p.categoria}">
+                        <div class="card h-100">
+                            <img src="${p.imagen}" class="card-img-top img-fluid1" alt="${p.nombre}">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">${p.nombre}</h5>
+                                <p class="card-text mb-1">Referencia: <span class="ref">${p.referencia}</span></p>
+                                <p class="card-text mb-1">${p.descripcion}</p>
+                                <p class="card-text fw-bold text-success">$${p.precio.toLocaleString()}</p>
+
+                                <button class="btn btn-warning agregar-carrito"
+                                    data-ref="${p.referencia}"
+                                    data-nombre="${p.nombre}"
+                                    data-precio="${p.precio}">
+                                    <i class="bi bi-cart-plus"></i> Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+        } 
+        catch (error) {
+            console.error("Error cargando productos:", error);
+        }
+    }
+
+    cargarProductos();
+</script>
+
+    </body>
+</html>

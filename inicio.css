@@ -1,0 +1,112 @@
+/* Tipografía general */
+body {
+    font-family: 'Dancing Script', cursive;
+    background-color: #3D4A4B;
+}
+
+/* Botones estilo tienda */
+.btn-warning {
+    background-color: #c4a316;
+    border: none;
+    font-weight: bold;
+}
+
+.btn-warning:hover {
+    background-color: #a88f0c;
+}
+
+/* Anclaje suave a secciones */
+section {
+    scroll-margin-top: 70px;
+    background-color: #3D4A4B;
+}
+
+/* Navbar mejor separado */
+.navbar-nav .nav-link {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-right: 1rem;
+}
+
+/* Botones de categoría */
+.categorias {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.categorias .btn {
+    min-width: 150px;
+    padding: 0.6rem 1rem;
+}
+
+/* Galería de productos */
+.container .img-fluid {
+    border: 1px solid #ddd;
+    padding: 5px;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.container .img-fluid:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+/* Para metodos de pago */
+.container ul {
+    padding-left: 1.2rem;
+}
+
+.container ul li {
+    margin-bottom: 0.5rem;
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #25d366;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.img-fluid1 {
+    max-height: 250px;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    background-color: #3D4A4B;
+    padding: 4px;
+    border-color: black;
+    border: 10px;
+    border-radius: 8px;
+}
+
+#logo {
+    border-radius: 15px;
+    width: 50%;
+    height: 50%;
+}
+
+b {
+    color: #e7c158;
+}
+
+#red {
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+.img-fluid {
+    background-color: white; /* o usa otro color de fondo */
+    border-radius: 8px;       /* opcional para estética */
+}
