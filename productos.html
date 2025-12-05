@@ -238,7 +238,7 @@
         <script>
             async function cargarProductos() {
                 try {
-                    const respuesta = await fetch("http://localhost:8080/api/productos");
+                    const respuesta = await fetch("https://olve-almacen-cliente-backend.onrender.com/api/productos");
                     const productos = await respuesta.json();
 
                     const contenedor = document.getElementById("productos-container");
